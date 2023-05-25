@@ -1,0 +1,200 @@
+.container {
+	max-width: 1000px;
+	background-color: #1e2124;
+	margin: 0 auto;
+	font-family: 'gg sans SemiBold', sans-serif;
+	grid-template-rows: 20px 30px auto 50px;
+	grid-template-columns: 1fr 3fr 6fr 2fr;
+	display: grid;
+	grid-template-areas:
+	"menu-with-logo open-close open-close open-close"
+	"menu-with-logo search-of-friends menu menu"
+	"menu-with-logo friends wampus activ-contacts"
+	"menu-with-logo functions wampus activ-contacts"
+}
+
+.container > .menu-with-logo {
+	grid-area: menu-with-logo;
+	background-color: #1e2124;
+	display: flex;
+	flex-wrap: nowrap;
+	flex: start;
+	flex-direction: column;
+	align-items: center;
+}
+
+.logo-discord {
+	box-sizing: border-box;
+	width: 50px;
+	border-radius: 25%;
+	margin-top: 20px;
+}
+
+.logo {
+	box-sizing: border-box;
+	width: 50px;
+	background-color: #1e2124;
+}
+
+.open-close {
+	grid-area: open-close;
+	background-color: #1e2124;
+
+}
+
+.search-of-friends {
+	grid-area: search-of-friends;
+	background-color: #282b30;
+}
+
+.input {
+	max-width: 200px;
+	background-color: #1e2124;
+    color: #C0C0C0;
+	font-weight: bold;
+	font-size: 12px;
+	border: none;
+	border-radius: 5px;
+	padding: 7px;
+	margin: 5px 10px;
+}
+
+.friends {
+	grid-area: friends;
+	background-color: #282b30;
+}
+
+.functions {
+	grid-area: functions;
+	background-color: #1e2124;
+	
+}
+
+.container > .menu {
+	grid-area: menu;
+	background-color: #36393e;
+	font-size: 12px;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	border-bottom: 2px #1e2124 solid;
+	font-weight: bold;
+}
+
+.menu-friends, .menu-in-net, .add-friends {
+	color: #FFFFFF;
+}
+
+.menu-friends, .menu-in-net, .menu-all, .menu-wait, .menu-blocked, .add-friends {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.menu-all, .menu-wait, .menu-blocked {
+	color: #C0C0C0;
+}
+
+.menu-in-net {
+	background-color: #808080;
+}
+
+.add-friends {
+	background-color: #008000;
+}
+
+.menu-in-net, .add-friends {
+	border: none;
+	border-radius: 5px;
+	padding: 3px;
+}
+
+.wampus {
+	grid-area: wampus;
+	background-color: #36393e;
+}
+
+.foto-wampus {
+	max-width: 600px;
+	min-width: 200px;
+	height: auto;
+}
+
+.activ-contacts {
+	grid-area: activ-contacts;
+	background-color: #36393e;
+	color: #ffffff;
+	border-left: 2px #808080 solid;
+}
+
+.activ-name {
+	margin: 10px 10px;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.activ-contacts img {
+	box-sizing: border-box;
+	width: 30px;
+	height: 30px;
+	margin: 0 10px;
+	border-radius: 50%;
+}
+
+.activ {
+	color: #C0C0C0;
+	background-color: #1e2124;
+	border: none;
+	border-radius: 5px;
+	padding: 7px;
+	margin: 5px 5px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+@media only screen and (max-width: 900px) {
+	.container {
+		grid-template-areas:
+			"menu-with-logo open-close open-close"
+			"menu-with-logo search-of-friends menu"
+			"menu-with-logo friends wampus"
+			"menu-with-logo functions activ-contacts";
+		grid-template-columns: 1fr 3fr 8fr;
+		grid-template-rows: 20px 30px auto auto;
+	}
+	
+	.activ-contacts {
+	grid-area: activ-contacts;
+	background-color: #36393e;
+	color: #ffffff;
+	border: 2px #808080 solid;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.container {
+		grid-template-areas:
+			"menu-with-logo open-close open-close"
+			"menu-with-logo search-of-friends wampus"
+			"menu-with-logo friends wampus"
+			"menu-with-logo menu menu"
+			"menu-with-logo functions activ-contacts";
+		grid-template-columns: 1fr 2fr 9fr;
+		grid-template-rows: 20px 30px auto auto auto;
+	}
+
+	.foto-wampus {
+	width: 300px;
+	height: auto;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.foto-wampus {
+	width: 200px;
+	height: auto;
+	}
+.menu-friends, .menu-in-net, .menu-all, .menu-wait, .menu-blocked, .add-friends {
+	margin: 2px;
+	font-size: 9px;
+}
+
+}
